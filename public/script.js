@@ -81,6 +81,7 @@ function ListarOngs()
 
     })
   })
-}.catch((erro)=>{
+}
+.catch((erro)=>{
     console.log(erro)
-  });
+  })

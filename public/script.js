@@ -74,8 +74,15 @@ function ListarOngs()
       </ul>
       </div>
       </div>`
+
+
         container.appendChild(mediaItem);
+
 
     })
   });
 }
+
+.catch((erro)=>{
+    console.log(erro)
+  })

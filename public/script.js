@@ -80,7 +80,7 @@ function ListarOngs()
 
 
     })
-  });
+  })
 }.catch((erro)=>{
     console.log(erro)
-  })
+  });

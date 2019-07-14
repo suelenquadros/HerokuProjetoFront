@@ -1,13 +1,13 @@
-
-function CadastrarUsuario() {    
+console.log ("deu merda!")
+function CadastrarUsuario() {
 
     const nome = document.getElementById("Nome").value;
     const telefone = document.getElementById("Telefone").value;
     const endereco = document.getElementById("Endereco").value;
     const ramo = document.getElementById("Ramo").value;
-    const descricao = document.getElementById("Descricao").value;  
-    const email = document.getElementById("Email").value;  
-    const foto = ""; 
+    const descricao = document.getElementById("Descricao").value;
+    const email = document.getElementById("Email").value;
+    const foto = "";
 
     fetch('https://projetoongs.herokuapp.com/ongs', {
         method: 'POST',
@@ -21,23 +21,23 @@ function CadastrarUsuario() {
             'telefone': telefone,
             'endereco': endereco,
             'ramo': ramo,
-            'descricao': descricao, 
+            'descricao': descricao,
             'email':email,
-            'foto':foto           
+            'foto':foto
         })
     })
-    .then((response) => 
+    .then((response) =>
     {
       if(response.ok)
       {
-        EsconderTudo()        
+        EsconderTudo()
         $('#ConcluirCadastro').show();
       }
       else
       {
-        window.confirm("Falha:") 
+        window.confirm("Falha:")
       }
-       
+
     })
     .then((data) => {
         console.log(data);
@@ -55,8 +55,8 @@ function ListarOngs()
   .then((response) =>{
     return response.json();
   })
-  .then((comidas) =>{
-    comidas.forEach(ongs => {
+  .then((ongs) =>{
+    ongs.forEach(ongs => {
       const mediaItem = document.createElement('div');
       mediaItem.setAttribute('class', 'col-md-4 grid_listing');
       mediaItem.innerHTML = `
@@ -66,12 +66,12 @@ function ListarOngs()
       <div class="car-location">
       Ramo: ${ongs.ramo}
       </span>
-      </div> 
+      </div>
       <ul class="features_list">
       <li style="width:100%!important"><i class="fa fa-phone" aria-hidden="true" ></i>${ongs.telefone}</li>
-      <li style="width:100%!important"><i class="fa fa-envelope" aria-hidden="true" ></i>${ongs.email}</li> 
-      <li style="width:100%!important"><i class="fa fa-map-pin" aria-hidden="true" ></i>${ongs.endereco}</li>      
-      </ul>              
+      <li style="width:100%!important"><i class="fa fa-envelope" aria-hidden="true" ></i>${ongs.email}</li>
+      <li style="width:100%!important"><i class="fa fa-map-pin" aria-hidden="true" ></i>${ongs.endereco}</li>
+      </ul>
       </div>
       </div>`
         container.appendChild(mediaItem);

@@ -4336,26 +4336,6 @@ h3 {
   line-height: 25px;
   width: 25px;
 }
-.brand-section {
-  padding: 15px 0 35px;
-}
-.brand-hadding {
-  border-bottom:1px solid #bbbbbb;
-  border-right:0px;
-  float: none;
-  margin: 0 auto 30px;
-  padding: 0;
-  width: 100%;
-}
-.brand-hadding:after {
-	display:none;
-}
-.brand-logo-list {
-  float: none;
-  margin: 0 auto;
-  padding: 0;
-  width: 100%;
-}
 .footer-top {
   padding: 40px 0;
 }

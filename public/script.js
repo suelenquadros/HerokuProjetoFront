@@ -70,7 +70,7 @@ function ListarOngs()
       <ul class="features_list">
       <li style="width:100%!important"><i class="fa fa-phone" aria-hidden="true" ></i>${ongs.telefone}</li>
       <li style="width:100%!important"><i class="fa fa-envelope" aria-hidden="true" ></i>${ongs.email}</li>
-      <li style="width:100%!important"><i class="fa fa-map-pin" aria-hidden="true" ></i>${ongs.endereco}</li>
+      <li style="width:100%!important"><i class="fa fa-map-pin" aria-hidden="true" ></i>${ongs.endereco}</li>     
       </ul>
       </div>
       </div>`
